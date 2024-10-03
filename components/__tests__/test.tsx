@@ -1,4 +1,4 @@
-import { render, fireEvent } from "@testing-library/react-native";
+import { render } from "@testing-library/react-native";
 import { Pills } from "../Pills";
 import { getMaritalStatus } from "@/resources/getMaritalStatus";
 let pills: any;

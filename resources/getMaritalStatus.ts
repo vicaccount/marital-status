@@ -1,13 +1,14 @@
 import { MaritalStatus } from "@/interfaces/MaritalStatus";
 
 export async function getMaritalStatus() {
+  const x_api_key = "";
+  const authorization = "";
   const options = {
     method: "GET",
     headers: {
       accept: "application/json",
-      "x-api-key": "G3yCDUD91N4nW6YghwTdjJoA32gauL36pq2mWZH1",
-      authorization:
-        "Basic dmljdG9yZW5yaXF1ZWJhZXpsb3BlekBnbWFpbC5jb206TmFyYW5qYWR1bGNlMDkwNTY0",
+      "x-api-key": x_api_key,
+      authorization,
     },
   };
 

@@ -42,19 +42,23 @@ export function Pills() {
         <Text style={styles.title}>¿Cuál es tu estado civil?</Text>
       </View>
       {!maritalStatus.length ? (
-        <ActivityIndicator testID="activity-indicator" size="large" color="#018765" />
+        <ActivityIndicator
+          testID="activity-indicator"
+          size="large"
+          color="#018765"
+        />
       ) : (
         <View testID="marital-status-container" style={styles.radioContainer}>
           {maritalStatus.map((status) => {
             return (
               <Pressable
+                key={status.code}
                 onPress={() => onSelect(status.code)}
                 style={
                   selectedStatus === status.code
                     ? styles.radioSelected
                     : styles.radio
                 }
-                key={status.code}
               >
                 <Text style={styles.radioText}>{status.description}</Text>
                 <View
@@ -137,7 +141,6 @@ const btnContinueText = {
 
 const styles = StyleSheet.create({
   progressBarContainer: {
-    marginTop: 50,
     flexDirection: "row",
     width: "100%",
     alignItems: "center",
@@ -165,18 +168,16 @@ const styles = StyleSheet.create({
     width: "100%",
     justifyContent: "center",
     alignItems: "flex-start",
-    marginBottom: 10,
   },
   image: {
-    width: 80,
-    height: 80,
+    width: 90,
+    height: 90,
     marginLeft: 25,
   },
   titleContainer: {
     width: "100%",
     justifyContent: "center",
     alignItems: "flex-start",
-    marginBottom: 10,
   },
   title: {
     fontSize: 24,
