@@ -42,9 +42,9 @@ export function Pills() {
         <Text style={styles.title}>¿Cuál es tu estado civil?</Text>
       </View>
       {!maritalStatus.length ? (
-        <ActivityIndicator size="large" color="#018765" />
+        <ActivityIndicator testID="activity-indicator" size="large" color="#018765" />
       ) : (
-        <View style={styles.radioContainer}>
+        <View testID="marital-status-container" style={styles.radioContainer}>
           {maritalStatus.map((status) => {
             return (
               <Pressable
